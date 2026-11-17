@@ -1,0 +1,133 @@
+/* Каркас экранов входа: строка бренда сверху и одна колонка контента, выровненная по левому краю */
+.page {
+  min-height: 100vh;
+  background: var(--app-bg);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--app-text);
+  text-decoration: none;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--app-accent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brandProduct {
+  padding-left: 10px;
+  border-left: 1px solid var(--app-border-strong);
+  font-size: 15px;
+  color: var(--app-text-secondary);
+}
+
+.stand {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--app-text-secondary);
+  text-align: right;
+}
+
+.main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 32px 64px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--app-text-secondary);
+  text-decoration: none;
+}
+
+.back:hover { color: var(--app-text); }
+.back svg { width: 20px; height: 20px; }
+
+.head {
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+.title {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 12px 0 0;
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--app-text-secondary);
+}
+
+.points {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 0;
+}
+
+.points div {
+  padding-left: 14px;
+  border-left: 2px solid var(--app-border-strong);
+}
+
+.points dt {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.points dd {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--app-text-secondary);
+}
+
+.action { margin-top: 24px; }
+
+.footnote {
+  max-width: 640px;
+  margin: 40px 0 0;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--app-text-tertiary);
+}
+
+@media (max-width: 720px) {
+  .bar { padding: 16px; }
+  .stand { display: none; }
+  .main { padding: 8px 16px 48px; }
+  .lead { font-size: 16px; line-height: 24px; }
+}
